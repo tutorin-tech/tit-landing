@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+
+{% block body %}
+    <div class="mdk-header-layout js-mdk-header-layout">
+        {% include 'organisms/header.html' %}
+
+        {% block content %}{% endblock %}
+
+        {% include 'organisms/footer.html' %}
+    </div>
+{% endblock %}
