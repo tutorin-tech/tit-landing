@@ -1,0 +1,52 @@
+{% load static %}
+
+<div class="js-fix-footer bg-white border-top-2">
+    <div class="container page-section py-lg-48pt">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row">
+                    <div class="col-6 col-md-4 mb-24pt mb-md-0">
+                        <h4 class="text-70">Сообщество</h4>
+                        <nav class="nav nav-links nav--flush flex-column">
+                            <a class="nav-link" href="">Связаться с нами</a>
+                            <a class="nav-link" href="">Tutor In Tech на GitHub</a>
+                        </nav>
+                    </div>
+                    <div class="col-6 col-md-4 mb-32pt mb-md-0"></div>
+                </div>
+            </div>
+            <div class="col-md-4 text-md-right">
+                <p class="text-70 brand justify-content-md-end">
+                    {% include 'atoms/logo.html' with class='brand-icon' %}
+                </p>
+                <p class="text-muted mb-0 mb-lg-16pt">
+                    Tutorio is an online learning platform that helps anyone achieve their personal and professional goals.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-footer page-section py-lg-32pt">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2 col-sm-4 mb-24pt mb-md-0">
+                    <p class="text-white-70 mb-8pt"><strong>Мы в соц. сетях</strong></p>
+                    <nav class="nav nav-links nav--flush">
+                        <a href="https://github.com/tutorin-tech" target="_blank" class="nav-link mr-8pt">
+                            <i class="fab fa-2x fa-github-square" style="color: #a3adb7;"></i>
+                        </a>
+                    </nav>
+                </div>
+                <div class="col-md-6 col-sm-4 mb-24pt mb-md-0 d-flex align-items-center"></div>
+                <div class="col-md-4 text-md-right">
+                    <p class="mb-8pt">
+                        <a href="" class="text-white-70 text-underline d-block">
+                            Политика конфиденциальности
+                        </a>
+                    </p>
+                    <p class="text-white-50 mb-0">&copy; {% now 'Y' %} Tutor In Tech</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
