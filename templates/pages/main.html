@@ -4,4 +4,8 @@
     {% include 'organisms/value_proposition.html' %}
 
     {% include 'organisms/values.html' %}
+
+    {% if courses %}
+        {% include 'organisms/courses.html' %}
+    {% endif %}
 {% endblock %}

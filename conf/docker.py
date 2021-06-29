@@ -14,3 +14,5 @@ SECRET_KEY = os.environ['SECRET_KEY']
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = os.getenv('STATIC_URL', 'http://localhost:8004/')
+
+TIT_API_HOST = os.environ.get('TIT_API_HOST', 'http://127.0.0.1:8003')

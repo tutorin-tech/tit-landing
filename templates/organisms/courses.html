@@ -1,0 +1,31 @@
+<div class="page-section border-bottom-2">
+    <div class="container page__container">
+        <div class="row align-items-end mb-16pt mb-md-32pt">
+            <div class="col-md-auto mb-32pt mb-md-0">
+                <div class="page-headline page-headline--title text-center text-md-left p-0">
+                    <h2>Курсы</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for course in courses %}
+            <div class="col-sm-6 col-md-4 col-lg-3">
+                <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
+
+                    <a href="/course/{{course.id}}" class="js-image" data-position="center">
+                        <img src="{{course.preview_image}}" alt="course" width="208px" height="168px">
+                        <span class="overlay__content"></span>
+                    </a>
+
+                    <div class="mdk-reveal__content">
+                        <div class="card-body">
+                            <a class="card-title" href="/course/{{course.id}}">{{course.name}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
