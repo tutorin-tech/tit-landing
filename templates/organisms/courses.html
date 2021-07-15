@@ -13,17 +13,23 @@
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="card card--elevated card-course overlay js-overlay mdk-reveal js-mdk-reveal " data-partial-height="40" data-toggle="popover" data-trigger="click">
 
-                    <a href="/course/{{course.id}}" class="js-image" data-position="center">
+                    <div class="js-image" data-position="center" style="cursor: pointer;">
                         <img src="{{course.preview_image}}" alt="course" width="208px" height="168px">
                         <span class="overlay__content"></span>
-                    </a>
+                    </div>
 
                     <div class="mdk-reveal__content">
                         <div class="card-body">
-                            <a class="card-title" href="/course/{{course.id}}">{{course.name}}</a>
+                            <div class="d-flex">
+                                <div class="flex">
+                                    <a class="card-title">{{course.name}}</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
+                {% include 'molecules/popover.html' %}
             </div>
             {% endfor %}
         </div>
