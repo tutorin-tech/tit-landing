@@ -4,7 +4,9 @@
     <div class="mdk-header-layout js-mdk-header-layout">
         {% include 'organisms/header.html' %}
 
-        {% block content %}{% endblock %}
+        <div class="mdk-header-layout__content page-content">
+            {% block content %}{% endblock %}
+        </div>
 
         {% include 'organisms/footer.html' %}
     </div>
