@@ -1,6 +1,7 @@
 """A module that contains the class-based views related to the landing application. """
 
-from django.views.generic import TemplateView
+from django.urls import reverse
+from django.views.generic import RedirectView, TemplateView
 
 from .api_client import request_courses
 from .exceptions import CoursesRequestFailed
@@ -20,3 +21,22 @@ class MainPage(TemplateView):
             context['courses'] = None
 
         return context
+
+
+class SignOut(RedirectView):
+    """Class-based view implementing signing out of an account. """
+
+    def dispatch(self, request, *args, **kwargs):
+        try:
+            self.url = request.POST['next']
+        except KeyError:
+            self.url = reverse('main-page')
+
+        return super().dispatch(request, *args, **kwargs)
+
+    def get(self, request, *args, **kwargs):
+        response = super().get(request, *args, **kwargs)
+        response.delete_cookie('accessToken')
+        response.delete_cookie('refreshToken')
+
+        return response
