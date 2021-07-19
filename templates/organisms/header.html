@@ -5,11 +5,13 @@
                 {% include 'atoms/logo.html' with class='navbar-brand-icon mr-0 mr-md-8pt' logo_icon='images/logo/white-100@2x.png' %}
             </a>
 
-            <ul class="nav navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
-                <li class="d-flex nav-item">
-                    {% include 'atoms/contact_us_btn.html' %}
-                </li>
-            </ul>
+            <div class="navbar-nav ml-auto flex-nowrap" style="white-space: nowrap;">
+                {% if user.is_authenticated %}
+                    {% include 'atoms/user_dropdown.html' %}
+                {% else %}
+                    {% include 'atoms/auth_links.html' %}
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
