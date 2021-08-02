@@ -46,3 +46,9 @@ class SignOut(RedirectView):
         response.delete_cookie('refreshToken')
 
         return response
+
+
+class TermsOfUse(TemplateView):
+    """The terms-of-use page view. """
+
+    template_name = 'pages/terms-of-use.html'
