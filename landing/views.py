@@ -23,6 +23,12 @@ class MainPage(TemplateView):
         return context
 
 
+class PrivacyPolicy(TemplateView):
+    """The privacy-policy page view. """
+
+    template_name = 'pages/privacy-policy.html'
+
+
 class SignOut(RedirectView):
     """Class-based view implementing signing out of an account. """
 

@@ -2,9 +2,10 @@
 
 from django.urls import re_path
 
-from .views import MainPage, SignOut
+from .views import MainPage, PrivacyPolicy, SignOut
 
 urlpatterns = [
     re_path(r'^$', MainPage.as_view(), name='main-page'),
+    re_path(r'^privacy-policy/?$', PrivacyPolicy.as_view(), name='privacy-policy'),
     re_path(r'^sign-out/?$', SignOut.as_view(), name='sign-out'),
 ]
