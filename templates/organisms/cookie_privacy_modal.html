@@ -1,0 +1,32 @@
+<div style="position: fixed; bottom: 0; border-radius: 0; display: none;" id="toast-btn" onclick="showCookiePrivacy()" type="button" class="btn btn-primary ml-4 text-white px-3 py-2 rounded-top">
+    Использование файлов cookie
+</div>
+
+<div style="position: fixed; bottom: 0; max-width: 380px;" id="toast-modal" class="toast ml-3 show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-body">
+        <p>
+            Мы используем файлы cookie для анализа нашего трафика, чтобы мы могли улучшить наш веб-сайт и предоставить вам лучший опыт. Смотрите нашу&nbsp;
+            <a style="color: #2c84dd" href="/privacy-policy" target="_blank" rel="noreferrer"><u>политику конфиденциальности</u></a>
+        </p>
+        <div class="d-flex justify-content-around">
+            <button onclick="hideCookiePrivacy()" class="btn btn-link" type="button">Запретить</button>
+            <button onclick="hideCookiePrivacy()" class="btn btn-primary" type="button">Разрешить файлы cookie</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showCookiePrivacy() {
+        $('#toast-modal').toggleClass('hide');
+        $('#toast-modal').toggleClass('show');
+
+        $('#toast-btn').hide();
+    }
+
+    function hideCookiePrivacy() {
+        $('#toast-modal').toggleClass('hide');
+        $('#toast-modal').toggleClass('show');
+
+        $('#toast-btn').show();
+    }
+</script>
